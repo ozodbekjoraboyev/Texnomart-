@@ -1,7 +1,7 @@
 import React from "react";
 import NavLokation from "./NavLokation";
 import { Route, Routes } from "react-router-dom";
-import NavbarCard from "./navbarCard";
+// import NavbarCard from "./navbarCard";
 
 function NavbarHome() {
   return (

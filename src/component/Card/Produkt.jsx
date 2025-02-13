@@ -424,48 +424,46 @@ function AlohidaCard() {
             </button>
             <p>{produktalohoda.minimal_loan_price?.month_number} /oy</p>
           </div>
-        <div>
-
-        <p>{produktalohoda.minimal_loan_price.description}</p>
-<div className="flex overflow-x-auto gap-2 scrollbar">
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/1/95d6e4b5-cc9e-4cb1-b7be-9af419c5d094.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/8/9451a313-9349-4cce-bdf7-50eb92b28db2.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/11/6c0315e8-3c60-4e6b-b470-6664bececd3f.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/2/63fccc36-6fef-40c6-8b22-8c9d95fe4e3b.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/12/89946328-85c8-4fbb-9d9d-6e00511d3b23.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/9/ce619468-77a8-4cd0-b34f-be34a3342d98.png"
-    alt=""
-  />
-  <img
-    className="w-17"
-    src="https://mini-io-api.texnomart.uz/order/order/loan-system/14/7fa17d02-916a-4b3f-bc93-a58f93dc9bbb.png"
-    alt=""
-  />
-</div>
-</div>
-
+          <div>
+            <p>{produktalohoda.minimal_loan_price.description}</p>
+            <div className="flex overflow-x-auto gap-2 scrollbar">
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/1/95d6e4b5-cc9e-4cb1-b7be-9af419c5d094.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/8/9451a313-9349-4cce-bdf7-50eb92b28db2.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/11/6c0315e8-3c60-4e6b-b470-6664bececd3f.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/2/63fccc36-6fef-40c6-8b22-8c9d95fe4e3b.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/12/89946328-85c8-4fbb-9d9d-6e00511d3b23.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/9/ce619468-77a8-4cd0-b34f-be34a3342d98.png"
+                alt=""
+              />
+              <img
+                className="w-17"
+                src="https://mini-io-api.texnomart.uz/order/order/loan-system/14/7fa17d02-916a-4b3f-bc93-a58f93dc9bbb.png"
+                alt=""
+              />
+            </div>
+          </div>
 
           <div className="flex items-center gap-5 border-b pb-5">
             <p className="bg-amber-500 rounded-md w-full text-center p-3">
