@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavbarHome from "./component/nav/navbarHome.jsx";
-import NavbarCard from "./component/nav/navbarCard.jsx";
 import Cards from "./component/Card/Cards.jsx";
 import AlohidaCard from "./component/Card/Produkt.jsx";
+import NavbarCard from "./component/nav/navbarCard.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

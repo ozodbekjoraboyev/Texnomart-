@@ -97,8 +97,8 @@ function AlohidaCard() {
           </div>
         </div>
       </div>
-      <div className=" flex gap-5  opacity-80 text-sm">
-        <div className="flex items-center pt-5 gap-2">
+      <div className=" flex gap-5   opacity-80 text-sm">
+        <div className="flex  items-center pt-5 gap-2">
           <FavouriteIcon className=" opacity-70" />
           <p>sevilmilar</p>
         </div>
@@ -107,32 +107,32 @@ function AlohidaCard() {
           <p>Taqqoslangan</p>
         </div>
       </div>
-      <div className=" flex items-center ">
-        <div className=" flex items-center pt-16">
-          <div>
-            <div className="">
+      <div className="  flex items-center ">
+        <div className="m-auto flex items-center pt-16">
+          <div >
+            <div className=" ">
               <img
-                className="w-[50px] cursor-pointer"
+                className="w-[50px] pb-3 cursor-pointer"
                 src={produktalohoda.large_images[0]}
                 alt=""
               />
               <img
-                className="w-[50px] cursor-pointer"
+                className="w-[50px] pb-3 cursor-pointer"
                 src={produktalohoda.large_images[1]}
                 alt=""
               />
               <img
-                className="w-[50px] cursor-pointer"
+                className="w-[50px] pb-3 cursor-pointer"
                 src={produktalohoda.large_images[2]}
                 alt=""
               />
               <img
-                className="w-[50px] cursor-pointer"
+                className="w-[50px] pb-3 cursor-pointer"
                 src={produktalohoda.large_images[3]}
                 alt=""
               />
               <img
-                className="w-[50px] cursor-pointer"
+                className="w-[50px] pb-3 cursor-pointer"
                 src={produktalohoda.large_images[4]}
                 alt=""
               />
