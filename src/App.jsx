@@ -4,7 +4,6 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from "axios";
 import useMyStore from "./ma-zustand";
-import NavbarHome from "./component/nav/navbarHome";
 import Carusel from "./component/Carusel/Carusel";
 import Cards from "./component/Card/Cards";
 import Categories from "./component/Caruseltagidagi/Catigores";
