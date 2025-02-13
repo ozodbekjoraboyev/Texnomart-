@@ -3,7 +3,7 @@ import Location01Icon from '../../assets/ikonkalar/Lokation'
 import Call02Icon from '../../assets/ikonkalar/Phone'
 import EarthIcon from '../../assets/ikonkalar/yerShari'
 import Nav_top from './Nav_top'
-import NavbarCard from './navbarCard'
+// import NavbarCard from './navbarCard'
 import NavbarCenter from './NavbarCenter'
 
 function NavLokation() {
