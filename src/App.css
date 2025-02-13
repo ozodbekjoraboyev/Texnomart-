@@ -1,0 +1,29 @@
+.scrollbar::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: yellow;
+}
+
+
+
+.skrol::-webkit-scrollbar {
+    height: 10px;
+}
+
+.skrol::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.skrol::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
