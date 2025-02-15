@@ -9,6 +9,8 @@ function CardlarniHususyatlari() {
   const [activIndex, setActivIndex] = useState(0);
   const { id } = useParams(); // Faqat URL'dan id olinadi
 
+  const [peginetn, setPeginetn] = useState([]);
+
   useEffect(() => {
     axios
       .get(`https://gw.texnomart.uz/api/web/v1/product/accessories?id=${id}`)
@@ -31,7 +33,11 @@ function CardlarniHususyatlari() {
           <div className="flex gap-4">
             {accsesuarlar.map((acc, index) => {
               return (
-                <div key={acc.index}>
+                <div
+                  key={acc.index}
+                  className=" flex container text-center justify-center m-auto"
+            
+                >
                   <Button
                     onClick={() => setActivIndex(index)}
                     type={activIndex === index ? "primary" : "default"}

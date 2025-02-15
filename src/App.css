@@ -19,11 +19,33 @@
 }
 
 .skrol::-webkit-scrollbar-thumb {
-    background-color: red;
+    background-color: yellow;
     border-radius: 20px;
     margin-top: 20px;
 }
 
 .skrol::-webkit-scrollbar-track {
     border-radius: 20px;
+}
+
+html,
+body {
+    overflow: none;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+.catigorya{
+    transition: all 2s;
 }

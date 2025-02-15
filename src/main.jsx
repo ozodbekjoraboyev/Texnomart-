@@ -6,15 +6,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavbarHome from "./component/nav/NavbarHome";
 import Cards from "./component/Card/Cards.jsx";
 import AlohidaCard from "./component/Card/Produkt.jsx";
-import NavbarCard from "./component/nav/navbarCard";
+import CatalogPage from "./component/Caruseltagidagi/CatalogPage";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <NavbarHome />
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/categories/:slug" element={<NavbarCard />} />
-      <Route path="product" element={<Cards />} />
+      <Route path="/categories/:slug" element={<CatalogPage />} />
       <Route path="/product/:id" element={<AlohidaCard />} />
     </Routes>
   </BrowserRouter>

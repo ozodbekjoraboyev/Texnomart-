@@ -13,9 +13,13 @@ function NavbarCenter() {
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [selectedItems, setSelectedItems] = useState({});
   const [selectAll, setSelectAll] = useState(false);
-
+  const [input, setInput] = useState("");
   const state = useMyStore();
   const cartCount = state.savatcha.length;
+
+  // const tuduList = tudu.filter((filter) => {
+  //   return filter.todo.toUpperCase().includes(input.toUpperCase());
+  // });
 
   const showModal = () => {
     setOpen(true);
@@ -49,7 +53,7 @@ function NavbarCenter() {
   };
 
   return (
-    <div className="bg-gray-300 p-3 py-5">
+    <div className="bg-gray-300 px-4 py-5">
       <div className="container m-auto flex items-center justify-between px-5">
         <div className="flex justify-between gap-5">
           <Link to={"/"}>
@@ -66,7 +70,15 @@ function NavbarCenter() {
 
         <div className="flex items-center border-2 border-amber-500 rounded w-[700px] p-2 relative">
           <Search02Icon className="w-5 h-5 text-gray-500" />
-          <input className="pl-2 outline-none w-full" type="text" placeholder="Qidirish..." />
+          <input
+            value={input}
+            onChange={(e) => {
+              setInput(e.currentTarget.value);
+            }}
+            className="pl-2 outline-none w-full"
+            type="text"
+            placeholder="Qidirish..."
+          />
         </div>
 
         <div className="flex items-center gap-5">
@@ -78,7 +90,10 @@ function NavbarCenter() {
             <FavouriteIcon />
             <p>Sevimli</p>
           </div>
-          <div onClick={showModal} className="flex flex-col items-center relative cursor-pointer">
+          <div
+            onClick={showModal}
+            className="flex flex-col items-center relative cursor-pointer"
+          >
             <ShoppingCart02Icon />
             {cartCount > 0 && (
               <span className="absolute -top-1 -right-2 bg-yellow-500 text-white text-xs font-bold flex items-center justify-center rounded-full w-5 h-5">
@@ -122,7 +137,10 @@ function NavbarCenter() {
 
                   <div>
                     {state.savatcha.map((item) => (
-                      <label key={item.mahsulot.id} className="flex items-center gap-2 cursor-pointer py-2">
+                      <label
+                        key={item.mahsulot.id}
+                        className="flex items-center gap-2 cursor-pointer py-2"
+                      >
                         <input
                           type="checkbox"
                           checked={selectedItems[item.mahsulot.id] || false}
@@ -134,7 +152,11 @@ function NavbarCenter() {
                           }}
                           className="w-5 h-5 border border-gray-400 flex items-center justify-center rounded cursor-pointer"
                         />
-                        <img src={item.mahsulot.image} alt={item.mahsulot.name} className="w-12 h-12 object-cover rounded" />
+                        <img
+                          src={item.mahsulot.image}
+                          alt={item.mahsulot.name}
+                          className="w-12 h-12 object-cover rounded"
+                        />
                         <p>{item.mahsulot.name}</p>
                       </label>
                     ))}

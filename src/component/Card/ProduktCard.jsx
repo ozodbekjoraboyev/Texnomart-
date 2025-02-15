@@ -40,7 +40,12 @@ function ProduktCard({ item }) {
       key={item.id}
       className="bg-white shadow-md rounded-2xl p-4  items-center transition transform hover:scale-105 hover:shadow-lg"
     >
-      <Link to={`/product/${item.id}`}>
+      <Link to={`/product/${item.id}`} onClick={()=>{
+        window.scrollTo({
+          behavior:"smooth",
+          top:0
+        })
+      }}>
         <img
           className="w-52 h-52 object-contain rounded-lg"
           src={item.image}

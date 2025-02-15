@@ -17,7 +17,7 @@ function App() {
         <Carusel />
         <Categories />
         <Cards />
-        <AlohidaCard/>
+        <AlohidaCard />
       </div>
     </>
   );

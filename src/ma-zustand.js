@@ -6,6 +6,7 @@ const useMyStore = create(() => {
     loading: true,
     savatcha: [],
     like: [],
+    haridlar: [],
   };
 });
 export default useMyStore;

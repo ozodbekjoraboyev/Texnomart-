@@ -3,13 +3,12 @@ import Location01Icon from '../../assets/ikonkalar/Lokation'
 import Call02Icon from '../../assets/ikonkalar/Phone'
 import EarthIcon from '../../assets/ikonkalar/yerShari'
 import Nav_top from './Nav_top'
-// import NavbarCard from './navbarCard'
 import NavbarCenter from './NavbarCenter'
 
 function NavLokation() {
   return (
    <>
-    <div className="bg-[#333]  text-white px-2 p-2 ">
+    <div className="bg-[#333] px-8 text-white  p-2 ">
       <div className=" container m-auto w-full">
         <div className=" flex justify-between">
           <div className="flex gap-2 cursor-pointer">
@@ -38,7 +37,6 @@ function NavLokation() {
     </div>
     <NavbarCenter />
       <Nav_top />
-      <NavbarCard />
 
    </>
   )
