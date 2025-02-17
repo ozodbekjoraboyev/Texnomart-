@@ -23,7 +23,7 @@ function CardlarniHususyatlari() {
   }, [id]);
 
   return (
-    <div>
+    <div className="">
       <p className="text-3xl pt-5">Aksessuarlar</p>
 
       {accsesuarlar.length === 0 ? (

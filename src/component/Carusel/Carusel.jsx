@@ -26,29 +26,31 @@ function Carusel() {
   }
 
   if (!imglar.length) {
-    return <div className="text-center py-10 text-gray-500">Yuklanmoqda...</div>;
+    return (
+      <div className="text-center py-10 text-gray-500">Yuklanmoqda...</div>
+    );
   }
 
   return (
-    <div className="flex flex-col items-center w-full ">
+    <div className=" flex-col  items-center w-full ">
       <div className="relative container w-full px-10  m-auto overflow-hidden">
         {/* Chap tugma */}
         <button
           onClick={prev}
-          className="absolute top-1/2 left-14 -translate-y-1/2 z-10 border border-gray-300 shadow-md rounded-full p-2 bg-white hover:bg-gray-100 active:scale-90 transition-transform"
+          className="absolute top-1/2 mt-20 left-14 -translate-y-1/2 z-0 border border-gray-300 shadow-md rounded-full p-2 bg-white hover:bg-gray-100 active:scale-90 transition-transform"
         >
           <ArrowLeft04Icon className="w-6 h-6" />
         </button>
 
         <img
-          className="w-[1500px] h-[350px] object-cover rounded-lg shadow-lg transition-transform duration-700"
+          className="w-[1500px] h-[400px] mt-5 object-cover rounded-lg shadow-lg transition-transform duration-700"
           src={imglar[carusel]}
           alt="Carusel rasmi"
         />
 
         <button
           onClick={next}
-          className="absolute top-1/2 right-14 -translate-y-1/2 z-10 border border-gray-300 shadow-md rounded-full p-2 bg-white hover:bg-gray-100 active:scale-90 transition-transform"
+          className="absolute top-1/2 mt-20 right-14 -translate-y-1/2 z-0 border border-gray-300 shadow-md rounded-full p-2 bg-white hover:bg-gray-100 active:scale-90 transition-transform"
         >
           <ArrowRight02Icon className="w-6 h-6" />
         </button>
@@ -70,4 +72,3 @@ function Carusel() {
 }
 
 export default Carusel;
-

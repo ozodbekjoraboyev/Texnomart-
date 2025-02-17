@@ -27,8 +27,7 @@
     };
 
     return (
-      <div className="container mx-auto px-5 pt-8 relative flex items-center justify-center">
-        {/* Chapga o'tkazish tugmasi */}
+      <div className="container mx-auto px-5  pt-8 relative flex items-center justify-center">
         <button
           className="absolute left-3 ml-10 md:left-0 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-200 p-3 rounded-full shadow-lg transition-all duration-300 z-10"
           onClick={prevCategory}
@@ -36,7 +35,6 @@
           <LeftOutlined className="text-gray-600 text-xl" />
         </button>
 
-        {/* Kategoriya kartalari */}
         <div className="w-full  overflow-hidden rounded-xl shadow-lg">
           <div className="flex gap-4 md:gap-5 justify-center items-center transition-transform duration-500">
             {categories.slice(0, 5).map((item) => (

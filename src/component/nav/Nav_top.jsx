@@ -17,13 +17,12 @@ function Nav_top() {
       });
   }, []);
   return (
-    <div> 
+    <div className="bg-gray-300 "> 
       {state.loading ? (
         <div>
          </div>
       ) : (
         <div className="flex items-center px-10 pb-5 pt-5 justify-between container m-auto">
-  
           {state.produkts.map((item, index) => {
             return (
               <Link to={`/categories/${item.slug}`} key={index}>

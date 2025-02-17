@@ -16,7 +16,7 @@ function App() {
       <div>
         <Carusel />
         <Categories />
-        <Cards />
+        <Cards  />
         <AlohidaCard />
       </div>
     </>

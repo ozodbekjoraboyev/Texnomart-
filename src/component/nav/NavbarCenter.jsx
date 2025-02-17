@@ -53,7 +53,7 @@ function NavbarCenter() {
   };
 
   return (
-    <div className="bg-gray-300 px-4 py-5">
+    <div className="bg-gray-300 px-4 py-5  ">
       <div className="container m-auto flex items-center justify-between px-5">
         <div className="flex justify-between gap-5">
           <Link to={"/"}>
@@ -68,7 +68,7 @@ function NavbarCenter() {
           </button>
         </div>
 
-        <div className="flex items-center border-2 border-amber-500 rounded w-[700px] p-2 relative">
+        <div className="flex  items-center border-2 border-amber-500 rounded w-[700px] p-2 relative">
           <Search02Icon className="w-5 h-5 text-gray-500" />
           <input
             value={input}

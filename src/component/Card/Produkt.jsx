@@ -8,11 +8,9 @@ import { Button, message, Popconfirm } from "antd";
 import CardlarniHususyatlari from "./CardlarniHususyatlari";
 import { tailChase } from "ldrs";
 
-
-
 function AlohidaCard() {
   tailChase.register();
-  const [produktalohoda, setProdukt] = useState({});
+  const [produktalohoda, setProdukt] = useState(null);
   const [messageApi, contextHolder] = message.useMessage();
 
   const [open, setOpen] = useState(false);
@@ -50,14 +48,21 @@ function AlohidaCard() {
     axios
       .get(`https://gw.texnomart.uz/api/web/v1/product/detail?id=${id}`)
       .then((res) => {
-        setProdukt(res.data.data.data || {});
+        if (res.data.data.data) {
+          setProdukt(res.data.data.data);
+        } else {
+          setProdukt(null);
+        }
       })
-      .catch((err) => console.error("API xatosi:", err));
+      .catch((err) => {
+        console.error("API xatosi:", err);
+        setProdukt(null);
+      });
   }, [id]);
 
-  if (!produktalohoda.name) {
+  if (!produktalohoda) {
     return (
-      <div className=" container mx-auto  flex justify-center">
+      <div className="container mx-auto flex justify-center ">
         <l-tail-chase size="100" speed="1.75" color="black"></l-tail-chase>
       </div>
     );
@@ -65,6 +70,7 @@ function AlohidaCard() {
 
   return (
     <div className="container m-auto">
+      
       <div className="border-b border-b-gray-500 pb-5">
         <div className="flex justify-between items-center">
           <div className="font-bold text-2xl">
