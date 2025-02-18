@@ -1,21 +1,28 @@
-import React, { Children, useState } from "react";
+import React, { children, useState } from "react";
 import SortByUp02Icon from "../../assets/ikonkalar/SortTop";
 import SortByDown02Icon from "../../assets/ikonkalar/Sort";
 import DashboardSquare01Icon from "../../assets/ikonkalar/dashboard-square-01-stroke-rounded";
+import useMyStore from "../../ma-zustand";
 
-function NarhlarProjekt({ name, hozirgi, setHozirgi, tartibi }) {
+function NarhlarProjekt({ name , title }) {
+  const state = useMyStore();
+  const { tartibi } = state;
   return (
     <div>
       <div className="flex justify-between gap-4 pb-5 select-none">
         <div
           onClick={() => {
-            setHozirgi(name);
+            useMyStore.setState({
+              currentSort: name,
+              tartibi: !tartibi
+            });
+            console.log(name);
           }}
           className="flex items-center gap-3 cursor-pointer"
         >
-          {name}
+          {title}
           <span className=" cursor-pointer">
-            {hozirgi === name ? (
+            {state.currentSort === name ? (
               <>{tartibi ? <SortByUp02Icon /> : <SortByDown02Icon />}</>
             ) : null}
           </span>

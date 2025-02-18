@@ -7,6 +7,8 @@ const useMyStore = create(() => {
     savatcha: [],
     like: [],
     haridlar: [],
+    currentSort: "Narx bo’yicha",
+    tartibi: false,
   };
 });
 export default useMyStore;

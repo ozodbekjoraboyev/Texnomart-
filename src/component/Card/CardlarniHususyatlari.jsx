@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 function CardlarniHususyatlari() {
   const [accsesuarlar, setAccsesuarlar] = useState([]);
   const [activIndex, setActivIndex] = useState(0);
-  const { id } = useParams(); // Faqat URL'dan id olinadi
+  const { id } = useParams();
 
   const [peginetn, setPeginetn] = useState([]);
 

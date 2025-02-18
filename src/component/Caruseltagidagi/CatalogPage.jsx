@@ -16,14 +16,15 @@ function CatalogPage() {
   const [cardlar, setCardlar] = useState(null);
   const [pagination, setPagination] = useState(1);
   const { slug } = useParams();
-  const [hozirgi, setHozirgi] = useState("Narx bo’yicha");
-  const [tartibi, setTartibi] = useState(false);
+  const { tartibi } = state;
 
   useEffect(() => {
     setCardlar(null);
     axios
       .get(
-        `https://gw.texnomart.uz/api/common/v1/search/filters?category_all=${slug}&sort=-order_count&page=${pagination}`
+        `https://gw.texnomart.uz/api/common/v1/search/filters?category_all=${slug}&sort= ${
+          tartibi === true ? "-" : ""
+        }${state.currentSort}&page=${pagination}`
       )
       .then((res) => {
         setCardlar(res.data.data);
@@ -32,7 +33,7 @@ function CatalogPage() {
         console.error("API xatosi:", err);
         setCardlar(null);
       });
-  }, [slug, pagination]);
+  }, [slug, pagination, state.currentSort ,tartibi]);
 
   if (!cardlar) {
     return (
@@ -41,39 +42,16 @@ function CatalogPage() {
       </div>
     );
   }
-  function SortButton(name) {
-    setHozirgi(name);
-    setTartibi(!tartibi);
-  }
+
   return (
     <div className="container mx-auto p-5">
       {/* //! mahsulotklar start */}
       <div className=" flex items-center gap-5 justify-between ">
         <div className="flex items-center gap-5 justify-center">
-          <NarhlarProjekt
-            name={"Narx bo’yicha"}
-            hozirgi={hozirgi}
-            setHozirgi={SortButton}
-            tartibi={tartibi}
-          />
-          <NarhlarProjekt
-            name={"Reyting bo'yicha"}
-            hozirgi={hozirgi}
-            setHozirgi={SortButton}
-            tartibi={tartibi}
-          />
-          <NarhlarProjekt
-            name={"Yangi kelganlar"}
-            hozirgi={hozirgi}
-            setHozirgi={SortButton}
-            tartibi={tartibi}
-          />
-          <NarhlarProjekt
-            name={"Ommabopligi bo'yicha"}
-            hozirgi={hozirgi}
-            setHozirgi={SortButton}
-            tartibi={tartibi}
-          />
+          <NarhlarProjekt name={"prise"} title={"Narh bo'yicha"} />
+          <NarhlarProjekt name={"rating"} title={"reyting"} />
+          <NarhlarProjekt name={"new"} title={"yangi kelganlar"} />
+          <NarhlarProjekt name={"order_count"} title={"omabopligi"} />
         </div>
         <div>
           <div className="flex justify-between gap-4 pb-5"></div>
