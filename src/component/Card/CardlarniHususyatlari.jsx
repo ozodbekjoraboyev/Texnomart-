@@ -24,10 +24,10 @@ function CardlarniHususyatlari() {
 
   return (
     <div className="">
-      <p className="text-3xl pt-5">Aksessuarlar</p>
+      <p className="text-3xl pt-5">Aksessuarlar </p>
 
       {accsesuarlar.length === 0 ? (
-        <p>Yuklanmoqda yoki aksessuarlar mavjud emas.</p>
+        <p className=" text-2xl text-center font-semibold p-10">Bomi og'riq chiqmayaptiku</p>
       ) : (
         <>
           <div className="flex gap-4">

@@ -48,7 +48,7 @@ function CatalogPage() {
       {/* //! mahsulotklar start */}
       <div className=" flex items-center gap-5 justify-between ">
         <div className="flex items-center gap-5 justify-center">
-          <NarhlarProjekt name={"prise"} title={"Narh bo'yicha"} />
+          <NarhlarProjekt name={"price"} title={"Narh bo'yicha"} />
           <NarhlarProjekt name={"rating"} title={"reyting"} />
           <NarhlarProjekt name={"new"} title={"yangi kelganlar"} />
           <NarhlarProjekt name={"order_count"} title={"omabopligi"} />

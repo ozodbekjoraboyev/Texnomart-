@@ -7,7 +7,7 @@ const useMyStore = create(() => {
     savatcha: [],
     like: [],
     haridlar: [],
-    currentSort: "Narx bo’yicha",
+    currentSort: "price",
     tartibi: false,
   };
 });
