@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu01Icon from "../../assets/ikonkalar/Katalog";
 import Search02Icon from "../../assets/ikonkalar/Search";
-import UserIcon from "../../assets/ikonkalar/Usder";
+
 import FavouriteIcon from "../../assets/ikonkalar/Heart";
 import ShoppingCart02Icon from "../../assets/ikonkalar/Shoping";
 import { Modal } from "antd";
 import useMyStore from "../../ma-zustand";
+import Kirish_Madal from "./Kirish_Madal";
 
 function NavbarCenter() {
   const [open, setOpen] = useState(false);
@@ -83,7 +84,7 @@ function NavbarCenter() {
 
         <div className="flex items-center gap-5">
           <div className="flex flex-col items-center">
-            <UserIcon />
+            <Kirish_Madal />
             <p>Krish</p>
           </div>
           <div className="flex flex-col items-center relative cursor-pointer">
