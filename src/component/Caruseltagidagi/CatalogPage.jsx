@@ -19,7 +19,7 @@ function CatalogPage() {
   const { tartibi } = state;
 
   useEffect(() => {
-    setCardlar(null);
+    setCardlar();
     axios
       .get(
         `https://gw.texnomart.uz/api/common/v1/search/filters?category_all=${slug}&sort= ${
@@ -66,7 +66,7 @@ function CatalogPage() {
       {/* //! mahsulotklar end */}
       <div className="flex flex-col md:flex-row gap-5">
         <div className="md:w-1/4 w-full">
-          <Haridlar slug={slug} pagination={pagination} />
+          <Haridlar filter={cardlar.filter} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 flex-grow">
